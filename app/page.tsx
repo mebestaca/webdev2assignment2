@@ -1,9 +1,10 @@
 import Image from "next/image";
+import StudentListSection from "./components/StudentListSection";
 
 export default function Home() {
   return (
     <div>
-      <h1>Check</h1>
+      <StudentListSection/>
     </div>
   );
 }
