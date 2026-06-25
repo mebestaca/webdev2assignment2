@@ -1,7 +1,12 @@
 import { z } from "zod";
 
 export const registrationSchema = z.object({
-    fullName: z
+  firstName: z
+    .string()
+    .min(2, "Please enter minimum 2 characters")
+    .max(50, "Name is too long"),
+
+  lasttName: z
     .string()
     .min(2, "Please enter minimum 2 characters")
     .max(50, "Name is too long"),
@@ -19,3 +24,7 @@ export const registrationSchema = z.object({
     .toUpperCase() // Automatically handles lowercase inputs gracefully
     .regex(/^[ABCDF][+-]?$/, "Enter a valid letter grade (e.g., A, B+, C-, F)"),
 });
+
+export type RegisterationData = z.infer<typeof registrationSchema>
+
+export const step1Fields = ['firstName', 'lastName', 'dateOfBirth', 'grade'] as const;
