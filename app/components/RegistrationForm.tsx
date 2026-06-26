@@ -5,7 +5,6 @@ import FormField from '../components/FormField'
 import { UseFormReturn } from 'react-hook-form';
 import { RegistrationData } from '../lib/schema';
 import { StudentContext } from '../shared/StudentContext';
-import { students } from '@/lib/data';
 
 type RegistrationProps = {
   form: UseFormReturn<RegistrationData>;
@@ -13,11 +12,9 @@ type RegistrationProps = {
 
 const RegistrationForm = ({form} : RegistrationProps) => {
   const context = useContext(StudentContext);
-  const lastId = students[students.length - 1]?.id;
 
   const {register,
          handleSubmit, 
-         trigger,
          formState:{
             errors,
             isSubmitting,
