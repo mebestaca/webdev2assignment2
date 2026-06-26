@@ -4,11 +4,11 @@ import StudentCard from './StudentCard'
 
 const StudentListSection = () => {
   return (
-    <div >
-       {students.map((student)=>(
-            <StudentCard key={student.id} student={student}/>
-        ))} 
-    </div>
+    <main>
+      {students.map((student)=>(
+        <StudentCard key={student.id} student={student}/>
+      ))} 
+    </main>
   )
 }
 
