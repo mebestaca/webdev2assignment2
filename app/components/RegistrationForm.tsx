@@ -1,9 +1,11 @@
 "use client"
 
-import React from 'react';
+import React, { useContext } from 'react';
 import FormField from '../components/FormField'
 import { useForm, UseFormReturn } from 'react-hook-form';
 import { RegistrationData } from '../lib/schema';
+import { StudentContext } from '../shared/StudentContext';
+import { students } from '@/lib/data';
 
 
 type RegistrationProps = {
@@ -11,6 +13,9 @@ type RegistrationProps = {
 };
 
 const RegistrationForm = ({form} : RegistrationProps) => {
+  const context = useContext(StudentContext);
+  const lastId = students[students.length - 1]?.id;
+
   const {register,
          handleSubmit, 
          trigger,
@@ -24,7 +29,15 @@ const RegistrationForm = ({form} : RegistrationProps) => {
          ' focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent';
 
   async function onSubmit(data: RegistrationData) {
-        console.log(data);
+        if (!context) return;
+
+        context.addStudent({
+          id: 'A00' + (context.students.length + 1),
+          firstName: data.firstName,
+          lastName: data.lastName,
+          dateOfBirth: new Date(data.dateOfBirth),
+          grade: data.grade,
+        });
   }
 
   return (

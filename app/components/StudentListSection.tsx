@@ -1,15 +1,18 @@
-import React from 'react'
+import { useContext } from "react";
 import StudentCard from './StudentCard'
-import { Student } from '@/lib/data'
+import { Student, students } from '@/lib/data'
+import { StudentContext } from "../shared/StudentContext";
 
-type Props = {
-  students: Student[]
-}
 
-const StudentListSection = ({ students }: Props) => {
+const StudentListSection = () => {
+  const context = useContext(StudentContext);
+
+  if (!context) return null;
+
+
   return (
     <main>
-      {students.map((student)=>(
+      {context.students.map((student)=>(
         <StudentCard key={student.id} student={student}/>
       ))} 
     </main>
