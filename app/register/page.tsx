@@ -10,7 +10,7 @@ const RegistrationPage = () => {
       resolver:zodResolver(registrationSchema),
       defaultValues:{
         firstName: "",
-        lasttName:"",
+        lastName:"",
         dateOfBirth:"",
         grade:"",
       }
