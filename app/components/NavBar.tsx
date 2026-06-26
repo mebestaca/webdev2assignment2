@@ -7,8 +7,8 @@ const NavBar = () => {
       <header className="bg-white border-b border-gray-200 px-6 py-4">
         <div className="max-w-5xl flex items-center">
           <div className="text-lg font-bold text-gray-900">
-            <h1 className="text-lg font-bold text-gray-900">Assignment 2</h1>
-            <p className="text-xs text-gray-400">CPRG 306 Web Development 2</p>
+            <h1 className="text-lg font-bold text-gray-900">New Generation High School</h1>
+            <p className="text-xs text-gray-400">Student Portal</p>
           </div>
         </div>
       </header>
@@ -17,7 +17,7 @@ const NavBar = () => {
           href="/"
           className="text-gray-200 font-bold px-5 py-2 border-2 rounded-lg hover:text-blue-400 hover:bg-slate-800 flex items-center"
         >
-          Students List
+          Students
         </Link>
         <Link
           href="/register"
