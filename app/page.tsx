@@ -5,12 +5,19 @@ import NavBar from "./components/NavBar";
 import RegistrationForm from "./components/RegistrationForm";
 import Footer from "./components/Footer";
 import { students as initialStudents } from "@/lib/data";
+import { RegistrationData } from "./lib/schema";
 
 export default function Home() {
   const [students, setStudents] = useState(initialStudents);
 
-  const addStudent = (newStudent: any) => {
-    setStudents([...students, newStudent]);
+  const addStudent = (newStudent: RegistrationData) => {
+    setStudents([
+      ...students, 
+      {
+        ...newStudent, 
+        id: crypto.randomUUID(),
+      },
+    ]);
   };
 
   return (

@@ -6,7 +6,7 @@ export const registrationSchema = z.object({
     .min(2, "Please enter minimum 2 characters")
     .max(50, "Name is too long"),
 
-  lasttName: z
+  lastName: z
     .string()
     .min(2, "Please enter minimum 2 characters")
     .max(50, "Name is too long"),

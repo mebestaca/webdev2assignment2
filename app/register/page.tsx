@@ -11,16 +11,21 @@ const RegistrationPage = () => {
         resolver:zodResolver(registrationSchema),
         defaultValues:{
           firstName: "",
-          lasttName:"",
+          lastName:"",
           dateOfBirth:"",
           grade:"",
         }
-    })
+    });
+  
+  const onSubmit = (data: RegistrationData) => {
+    console.log("Registered student:", data);
+  };
+
   return (
     <div>
-      <RegistrationForm form={form}/>
+      <RegistrationForm form={form} onSubmit={onSubmit}/>
     </div>
   )
-}
+};
 
-export default RegistrationPage
+export default RegistrationPage;
