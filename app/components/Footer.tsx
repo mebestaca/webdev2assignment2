@@ -1,6 +1,4 @@
 'use client'
-import React from "react"
-import { date } from "zod"
 
 const Footer =()=> {
 
@@ -9,7 +7,6 @@ const Footer =()=> {
             <p className="text-slate-200 ">Software Development - Web Development CPRG-306-B - SAIT</p>
         </div>
     )
-
 }
 
 export default Footer

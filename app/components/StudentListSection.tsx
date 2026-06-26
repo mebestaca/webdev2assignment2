@@ -1,14 +1,11 @@
 import { useContext } from "react";
 import StudentCard from './StudentCard'
-import { Student, students } from '@/lib/data'
 import { StudentContext } from "../shared/StudentContext";
-
 
 const StudentListSection = () => {
   const context = useContext(StudentContext);
 
   if (!context) return null;
-
 
   return (
     <main>

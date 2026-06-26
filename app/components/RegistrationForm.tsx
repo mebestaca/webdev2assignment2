@@ -1,12 +1,11 @@
 "use client"
 
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import FormField from '../components/FormField'
-import { useForm, UseFormReturn } from 'react-hook-form';
+import { UseFormReturn } from 'react-hook-form';
 import { RegistrationData } from '../lib/schema';
 import { StudentContext } from '../shared/StudentContext';
 import { students } from '@/lib/data';
-
 
 type RegistrationProps = {
   form: UseFormReturn<RegistrationData>;
@@ -85,23 +84,21 @@ const RegistrationForm = ({form} : RegistrationProps) => {
               <option value="D">D</option>
               <option value="F">F</option>
             </select>
-
           </FormField>
+
             <button 
               type="submit"
               disabled={isSubmitting}
               className="w-full rounded-lg bg-sky-600 py-3 text-sm font-semibold text-white transition hover:bg-sky-700 hover:shadow-lg active:scale-[0.98] disabled:cursor-not-allowed disabled:bg-slate-400"
             >
               {isSubmitting ? "Registering..." : "Register"}
-             
             </button>
 
             {isSubmitSuccessful && (
                 <div className="mt-4 rounded-lg bg-green-100 border border-green-300 p-3 text-center text-sm text-green-700">
                   Student registered successfully!
                 </div>
-              )}
-    
+            )}
         </form>
       </div>
     </main>
