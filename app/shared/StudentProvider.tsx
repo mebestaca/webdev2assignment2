@@ -4,7 +4,6 @@ import { useState } from "react";
 import { StudentContext } from "./StudentContext";
 import { Student, students as studentsList} from "@/lib/data";
 
-
 export default function StudentProvider({ children}: {
   children: React.ReactNode;
 }) {
