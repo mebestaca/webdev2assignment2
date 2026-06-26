@@ -9,7 +9,6 @@ const StudentListSection = () => {
 
   if (!context) return null;
 
-
   return (
     <main>
       {context.students.map((student)=>(
