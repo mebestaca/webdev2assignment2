@@ -24,7 +24,7 @@ const RegistrationForm = ({form} : RegistrationProps) => {
          ' focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent';
 
   async function onSubmit(data: RegistrationData) {
-        await new Promise((resolve) => {setTimeout(resolve,1200)})
+        console.log(data);
   }
 
   return (
