@@ -15,6 +15,7 @@ export default function Home() {
       ...students, 
       {
         ...newStudent, 
+        dateOfBirth: new Date(newStudent.dateOfBirth),
         id: crypto.randomUUID(),
       },
     ]);

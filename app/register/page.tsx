@@ -15,6 +15,10 @@ const RegistrationPage = () => {
         grade:"",
       }
   });
+
+  const onSubmit = (data: RegistrationData) => {
+    console.log("Registered student:", data);
+  };
   
   return (
     <div>
