@@ -23,4 +23,3 @@ const {register, handleSubmit, trigger, formState:{errors,isSubmitting, isSubmit
 }
 
 export default RegistrationForm
-
