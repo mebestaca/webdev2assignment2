@@ -5,6 +5,16 @@ import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 import StudentProvider from "./shared/StudentProvider";
 
+/**
+ * @author  Marc Edison Estaca, 
+ *          Reiner Justin Realica, 
+ *          Joshua Dyck
+ * @version 1.0
+ * @returns Component: Body of the entire website
+ * @description Most of the things here are default nextJS things except
+ *          for the NavBar, StudentProvider, and Footer
+ */
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
