@@ -37,7 +37,7 @@ const RegistrationForm = ({form} : RegistrationProps) => {
           </FormField>
           <FormField label='Semester' error={errors.grade?.message} required>
           <select className={inputClassStyle} {...register("grade")}>
-            <option value="">Select a semester...</option>
+            <option value="">Select grade...</option>
             <option value="A+">A+</option>
             <option value="A">A</option>
             <option value="A-">A-</option>
