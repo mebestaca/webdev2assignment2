@@ -25,6 +25,6 @@ export const registrationSchema = z.object({
     .regex(/^[ABCDF][+-]?$/, "Enter a valid letter grade (e.g., A, B+, C-, F)"),
 });
 
-export type RegisterationData = z.infer<typeof registrationSchema>
+export type RegistrationData = z.infer<typeof registrationSchema>
 
 export const step1Fields = ['firstName', 'lastName', 'dateOfBirth', 'grade'] as const;
