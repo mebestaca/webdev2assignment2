@@ -1,6 +1,4 @@
 import { Student } from '@/lib/data'
-import React from 'react'
-import Link from "next/link";
 
 type StudentProp = {
     student: Student
