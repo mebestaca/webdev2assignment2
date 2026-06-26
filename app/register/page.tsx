@@ -1,25 +1,26 @@
-// "use client"
-// import React from 'react'
-// import { RegistrationData, registrationSchema } from '../lib/schema';
-// import {useForm} from 'react-hook-form';
-// import { zodResolver } from '@hookform/resolvers/zod';
+"use client"
+import React from 'react'
+import { RegistrationData, registrationSchema } from '../lib/schema';
+import {useForm} from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import RegistrationForm from '../components/RegistrationForm';
 
-// const RegistrationPage = () => {
-//   const {register, handleSubmit, trigger, formState:{errors,isSubmitting, isSubmitSuccessful} } = 
-//     useForm<RegistrationData>({
-//         resolver:zodResolver(registrationSchema),
-//         defaultValues:{
-//           firstName: "",
-//           lasttName:"",
-//           dateOfBirth:"",
-//           grade:"",
-//         }
-//     })
-//   return (
-//     <div>
-//       <h2>Registration</h2>
-//     </div>
-//   )
-// }
+const RegistrationPage = () => {
+  const form = 
+    useForm<RegistrationData>({
+        resolver:zodResolver(registrationSchema),
+        defaultValues:{
+          firstName: "",
+          lasttName:"",
+          dateOfBirth:"",
+          grade:"",
+        }
+    })
+  return (
+    <div>
+      <RegistrationForm form={form}/>
+    </div>
+  )
+}
 
-// export default RegistrationPage
+export default RegistrationPage
