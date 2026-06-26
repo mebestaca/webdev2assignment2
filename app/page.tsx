@@ -6,7 +6,6 @@ import Footer from "./components/Footer";
 export default function Home() {
   return (
     <div>
-      <NavBar />
       <div id="body" className="bg-slate-300 p-10 flex-1 ">
         <StudentListSection />
         <RegistrationForm />
