@@ -29,15 +29,18 @@ const RegistrationForm = ({form} : RegistrationProps) => {
          ' focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent';
 
   async function onSubmit(data: RegistrationData) {
-        if (!context) return;
+    const { reset } = form;
+    if (!context) return;
 
-        context.addStudent({
-          id: 'A00' + (context.students.length + 1),
-          firstName: data.firstName,
-          lastName: data.lastName,
-          dateOfBirth: new Date(data.dateOfBirth),
-          grade: data.grade,
-        });
+    context.addStudent({
+      id: 'A00' + (context.students.length + 1),
+      firstName: data.firstName,
+      lastName: data.lastName,
+      dateOfBirth: new Date(data.dateOfBirth),
+      grade: data.grade,
+    });
+
+    reset();
   }
 
   return (
