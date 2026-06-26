@@ -2,43 +2,45 @@
 
 import React from 'react';
 import FormField from '../components/FormField'
-import { UseFormReturn } from 'react-hook-form';
+import { useForm, UseFormReturn } from 'react-hook-form';
 import { RegistrationData } from '../lib/schema';
 
 
 type RegistrationProps = {
   form: UseFormReturn<RegistrationData>;
-  onSubmit: (data: RegistrationData) => void;
 };
 
-const RegistrationForm = ({form, onSubmit} : RegistrationProps) => {
+const RegistrationForm = ({form} : RegistrationProps) => {
   const {register,
          handleSubmit, 
+         trigger,
          formState:{
             errors,
-            isSubmitting}} = form;
+            isSubmitting,
+            isSubmitSuccessful
+          }} = useForm();
 
   const inputClassStyle = 'w-full rounded-lg border border-slate-300 px-3 py-2 text-sm text-slate-900' +
-  'focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent';
+        'focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent';
 
   return (
     
     <main>
-      <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+      <form onSubmit={()=>{}} className="space-y-4">
         
-          <FormField label="First name" error={errors.firstName?.message} required>
+          <FormField label="First name" error={errors.firstName?.message?.toString()} required>
             <input className={inputClassStyle} {...register("firstName")}/>
           </FormField>
 
-          <FormField label="Last name" error={errors.lastName?.message} required>
+          <FormField label="Last name" error={errors.lastName?.message?.toString()} required>
             <input className={inputClassStyle} {...register("lastName")}/>
           </FormField>
 
-          <FormField label="Date of Birth" error={errors.dateOfBirth?.message} required>
+          <FormField label="Date of Birth" error={errors.dateOfBirth?.message?.toString()} required>
             <input type='date' className={inputClassStyle} {...register("dateOfBirth")} />
           </FormField>
 
-          <FormField label='Grade' error={errors.grade?.message} required>
+          <FormField label='Grade' error={errors.grade?.message?.toString()} required>
           <select className={inputClassStyle} {...register("grade")}>
             <option value="">Select grade...</option>
             <option value="A+">A+</option>

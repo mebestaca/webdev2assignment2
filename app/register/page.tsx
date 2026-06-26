@@ -16,13 +16,9 @@ const RegistrationPage = () => {
       }
   });
 
-  const onSubmit = (data: RegistrationData) => {
-    console.log("Registered student:", data);
-  };
-  
   return (
     <div>
-      <RegistrationForm form={form} onSubmit={onSubmit}/>
+      <RegistrationForm form={form}/>
     </div>
   )
 };
