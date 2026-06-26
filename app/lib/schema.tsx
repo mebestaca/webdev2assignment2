@@ -26,5 +26,3 @@ export const registrationSchema = z.object({
 });
 
 export type RegistrationData = z.infer<typeof registrationSchema>
-
-export const step1Fields = ['firstName', 'lastName', 'dateOfBirth', 'grade'] as const;

@@ -6,16 +6,16 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import RegistrationForm from '../components/RegistrationForm';
 
 const RegistrationPage = () => {
-  const form = 
-    useForm<RegistrationData>({
-        resolver:zodResolver(registrationSchema),
-        defaultValues:{
-          firstName: "",
-          lasttName:"",
-          dateOfBirth:"",
-          grade:"",
-        }
-    })
+  const form = useForm<RegistrationData>({
+      resolver:zodResolver(registrationSchema),
+      defaultValues:{
+        firstName: "",
+        lasttName:"",
+        dateOfBirth:"",
+        grade:"",
+      }
+  });
+  
   return (
     <div>
       <RegistrationForm form={form}/>
