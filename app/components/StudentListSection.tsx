@@ -1,8 +1,12 @@
-import { students } from '@/lib/data'
 import React from 'react'
 import StudentCard from './StudentCard'
+import { Student } from '@/lib/data'
 
-const StudentListSection = () => {
+type Props = {
+  students: Student[]
+}
+
+const StudentListSection = ({ students }: Props) => {
   return (
     <main>
       {students.map((student)=>(

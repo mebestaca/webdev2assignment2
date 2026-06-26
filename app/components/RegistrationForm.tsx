@@ -4,8 +4,12 @@ import { RegistrationData, registrationSchema } from '../lib/schema';
 import {useForm} from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 
-const RegistrationForm = () => {
-  const {register, handleSubmit, trigger, formState:{errors,isSubmitting, isSubmitSuccessful} } = 
+type Props = {
+  addStudent: (student: RegistrationData) => void;
+};
+
+const RegistrationForm = ({ addStudent }: Props) => {
+  const {register, handleSubmit, formState:{errors,isSubmitting}} =
     useForm<RegistrationData>({
         resolver:zodResolver(registrationSchema),
         defaultValues:{
@@ -14,7 +18,12 @@ const RegistrationForm = () => {
           dateOfBirth:"",
           grade:"",
         }
-    })
+    });
+
+    const onSubmit = (data: RegistrationData) => {
+      addStudent(data);
+    };
+    
   return (
     <div>
       
