@@ -1,6 +1,3 @@
-'use client'
-import StudentListSection from "./components/StudentListSection";
-
 /**
  * @author  Marc Edison Estaca, 
  *          Reiner Justin Realica, 
@@ -9,6 +6,8 @@ import StudentListSection from "./components/StudentListSection";
  * @returns Component: StudentListSection
  * @description Contains a list of student information (name, date of birth, current grade)
  */
+'use client'
+import StudentListSection from "./components/StudentListSection";
 
 export default function Home() {
   return (

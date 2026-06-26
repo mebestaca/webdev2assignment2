@@ -1,10 +1,3 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
-import NavBar from "./components/NavBar";
-import Footer from "./components/Footer";
-import StudentProvider from "./shared/StudentProvider";
-
 /**
  * @author  Marc Edison Estaca, 
  *          Reiner Justin Realica, 
@@ -14,6 +7,13 @@ import StudentProvider from "./shared/StudentProvider";
  * @description Most of the things here are default nextJS things except
  *          for the NavBar, StudentProvider, and Footer
  */
+
+import type { Metadata } from "next";
+import { Geist, Geist_Mono } from "next/font/google";
+import "./globals.css";
+import NavBar from "./components/NavBar";
+import Footer from "./components/Footer";
+import StudentProvider from "./shared/StudentProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
