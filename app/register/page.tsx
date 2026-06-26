@@ -1,5 +1,5 @@
 "use client"
-import React from 'react'
+
 import { RegistrationData, registrationSchema } from '../lib/schema';
 import {useForm} from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
