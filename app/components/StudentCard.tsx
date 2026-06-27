@@ -1,3 +1,13 @@
+/**
+ * @author  Marc Edison Estaca, 
+ *          Reiner Justin Realica, 
+ *          Joshua Dyck
+ * @version 1.0
+ * @returns StudentCard
+ * @description Returns a StudentCard component which displays the name,
+ *          date of birth, and grade of the student
+ */
+
 import { Student } from '@/lib/data'
 
 type StudentProp = {
