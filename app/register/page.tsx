@@ -1,3 +1,16 @@
+/**
+ * @author  Marc Edison Estaca, 
+ *          Reiner Justin Realica, 
+ *          Joshua Dyck
+ * @version 1.0
+ * @returns RegistrationForm
+ * @description Contains the form structure. The demo code provided during class
+ *          is cluttered with ui logic, form logic, and codes which really belongs
+ *          to a different component given huge it is. Because of that, our group
+ *          decided to split it into two. This part contains the form information
+ *          and RegistrationForm which contains the form logic.
+ */
+
 "use client"
 
 import { RegistrationData, registrationSchema } from '../lib/schema';
