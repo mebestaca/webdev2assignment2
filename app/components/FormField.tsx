@@ -1,3 +1,14 @@
+/**
+ * @author  Marc Edison Estaca, 
+ *          Reiner Justin Realica, 
+ *          Joshua Dyck
+ * @version 1.0
+ * @returns FormField component
+ * @description A really well made formfield component that gracefully
+ *          wraps an input component with a label, error message,
+ *          and hints.
+ */
+
 import React from 'react';
 
 type FormFieldProps = {
