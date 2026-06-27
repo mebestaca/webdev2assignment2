@@ -1,3 +1,13 @@
+/**
+ * @author  Marc Edison Estaca, 
+ *          Reiner Justin Realica, 
+ *          Joshua Dyck
+ * @version 1.0
+ * @description uses zod to define a schema. Each object element
+ *          defines each of the attributes. Additionally provides
+ *          an error message.
+ */
+
 import { z } from "zod";
 
 export const registrationSchema = z.object({
@@ -21,7 +31,7 @@ export const registrationSchema = z.object({
   grade: z
     .string()
     .min(1, "Grade is required")
-    .toUpperCase() // Automatically handles lowercase inputs gracefully
+    .toUpperCase() 
     .regex(/^[ABCDF][+-]?$/, "Enter a valid letter grade (e.g., A, B+, C-, F)"),
 });
 
