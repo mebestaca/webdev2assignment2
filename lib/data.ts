@@ -1,8 +1,10 @@
 /**
- * 
- * 
- * 
- * 
+ * @author  Marc Edison Estaca, 
+ *          Reiner Justin Realica, 
+ *          Joshua Dyck
+ * @version 1.0
+ * @returns Student object
+ * @description Describes the structure of a student object
  */
 
 export type Student = {
